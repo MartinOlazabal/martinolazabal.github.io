@@ -1,0 +1,258 @@
+{
+  "modelos": [
+    {
+      "id": "modelos-ortodoncia",
+      "carpeta": "herramientas didacticas dentista",
+      "nombre": "Modelos didácticos de ortodoncia",
+      "categoria": "Encargos a medida",
+      "resumen": "Piezas a medida para que un dentista explique la ortodoncia a sus pacientes.",
+      "descripcion": "Una serie de piezas diseñadas a medida para un dentista, que las usa para explicarles a sus pacientes cómo funciona la ortodoncia. Cada modelo cumple una función didáctica distinta.\n\nUno de ellos tiene una articulación que simula la apertura de la mordida, para mostrar cómo el tratamiento corrige ese problema.",
+      "destacado": "Encargo a medida",
+      "ficha": {
+        "material": null,
+        "herramienta": null,
+        "tiempoImpresion": null,
+        "medidas": null
+      },
+      "fotos": [
+        "img_0090",
+        "img_0089",
+        "img_0088",
+        "img_0091",
+        "img_0092",
+        "img_0071",
+        "img_0072",
+        "img_0073",
+        "img_0074",
+        "img_0075",
+        "img_0076",
+        "img_0077"
+      ],
+      "fotosExcluidas": [],
+      "ocultar": {},
+      "video": null
+    },
+    {
+      "id": "banderin-uruguay",
+      "carpeta": "banderinuruguay",
+      "nombre": "Banderín de Uruguay",
+      "categoria": "Decoración",
+      "resumen": "Banderín rústico con malla tipo cota de malla, impreso en una sola pieza.",
+      "descripcion": "Un banderín rústico de Uruguay, inspirado en el de la selección de fútbol.\n\nLa malla funciona como una cota de malla: los eslabones salen de la impresora ya entrelazados, en una sola pieza y sin ensamblar. Fue la parte más difícil del diseño. El escudo es una pieza aparte, así que el mismo banderín se puede adaptar a otras selecciones.",
+      "destacado": "Se imprime en una sola pieza",
+      "ficha": {
+        "material": null,
+        "herramienta": null,
+        "tiempoImpresion": null,
+        "medidas": null
+      },
+      "fotos": [
+        "img_0046",
+        "img_0047"
+      ],
+      "fotosExcluidas": [],
+      "ocultar": {},
+      "video": "video.mp4"
+    },
+    {
+      "id": "posavasos-articulado",
+      "carpeta": "posa vaso articulado",
+      "nombre": "Posavasos articulado",
+      "categoria": "Decoración",
+      "resumen": "Hexágonos articulados: posavasos, adorno o antiestrés.",
+      "descripcion": "Un posavasos hecho de hexágonos articulados que se mueven entre sí.\n\nSirve como posavasos, como adorno o como antiestrés para tener en la mano: una vez que lo agarrás, cuesta dejar de moverlo.",
+      "destacado": null,
+      "ficha": {
+        "material": null,
+        "herramienta": null,
+        "tiempoImpresion": null,
+        "medidas": null
+      },
+      "fotos": [
+        "img_0058",
+        "img_0059",
+        "img_0056",
+        "img_0057"
+      ],
+      "fotosExcluidas": [],
+      "ocultar": {},
+      "video": "video.mp4"
+    },
+    {
+      "id": "porta-credenciales",
+      "carpeta": "porta credenciales",
+      "nombre": "Porta credenciales",
+      "categoria": "Accesorios",
+      "resumen": "Para documentos o tarjetas de acceso, en tamaño de tarjeta estándar.",
+      "descripcion": "Un porta credenciales para documentos o tarjetas de acceso, pensado para el tamaño estándar universal de tarjeta.\n\nEs el producto que más vendí: ya van más de 200 unidades.",
+      "destacado": "Más de 200 vendidos",
+      "ficha": {
+        "material": null,
+        "herramienta": null,
+        "tiempoImpresion": null,
+        "medidas": null
+      },
+      "fotos": [
+        "img_0054",
+        "img_0052",
+        "img_0053",
+        "img_0055"
+      ],
+      "fotosExcluidas": [],
+      "ocultar": {},
+      "video": null
+    },
+    {
+      "id": "tarro-magnesio",
+      "carpeta": "tarro Magnesio",
+      "nombre": "Tarro para magnesio",
+      "categoria": "Accesorios",
+      "resumen": "Tapa a rosca con agujeros calculados para dosificar magnesio en polvo.",
+      "descripcion": "Un tarro con tapa a rosca para llevar magnesio en polvo y usarlo de forma práctica.\n\nLo importante está en la tapa: los agujeros son lo bastante chicos para que el magnesio no se vuelque solo, y lo bastante grandes para que, al golpear el tarro contra la palma, caiga una porción justa sin desperdiciar.",
+      "destacado": null,
+      "ficha": {
+        "material": null,
+        "herramienta": null,
+        "tiempoImpresion": null,
+        "medidas": null
+      },
+      "fotos": [
+        "img_0082",
+        "img_0084",
+        "img_0050",
+        "img_0051"
+      ],
+      "fotosExcluidas": [],
+      "ocultar": {},
+      "video": null
+    },
+    {
+      "id": "organizador-escritorio",
+      "carpeta": "organizador escritorio",
+      "nombre": "Organizador de escritorio",
+      "categoria": "Organización",
+      "resumen": "Portalápices y clasificador de papeles sobre una misma base.",
+      "descripcion": "Un organizador de escritorio para ordenar papeles y guardar bolígrafos: un portalápices de dos compartimentos y un clasificador de documentos que comparten la misma base.",
+      "destacado": null,
+      "ficha": {
+        "material": null,
+        "herramienta": null,
+        "tiempoImpresion": null,
+        "medidas": null
+      },
+      "fotos": [
+        "img_0093",
+        "img_0095",
+        "img_0097",
+        "img_0098"
+      ],
+      "fotosExcluidas": [
+        "img_0094",
+        "img_0099"
+      ],
+      "ocultar": {
+        "img_0093": [
+          [
+            1600,
+            1930,
+            1980,
+            2130
+          ]
+        ]
+      },
+      "video": null
+    },
+    {
+      "id": "organizador-cajon",
+      "carpeta": "organizador de cajon",
+      "nombre": "Organizador de cajón",
+      "categoria": "Organización",
+      "resumen": "Compartimentos de distintos tamaños para tener todo separado.",
+      "descripcion": "Un organizador para cajón, con módulos de distintos tamaños para separar objetos pequeños y tenerlos siempre a mano.",
+      "destacado": null,
+      "ficha": {
+        "material": null,
+        "herramienta": null,
+        "tiempoImpresion": null,
+        "medidas": null
+      },
+      "fotos": [
+        "img_0100",
+        "img_0101"
+      ],
+      "fotosExcluidas": [],
+      "ocultar": {},
+      "video": null
+    },
+    {
+      "id": "pantalla-lampara",
+      "carpeta": "lampara xiaomi",
+      "nombre": "Pantalla para lámpara Xiaomi",
+      "categoria": "Accesorios",
+      "resumen": "Suaviza la luz de una lámpara de escritorio que encandilaba de cerca.",
+      "descripcion": "Una pantalla para una lámpara de escritorio Xiaomi. Esa lámpara puede molestar a la vista si se usa de cerca; la pantalla atenúa la luz y la vuelve más cómoda.",
+      "destacado": null,
+      "ficha": {
+        "material": null,
+        "herramienta": null,
+        "tiempoImpresion": null,
+        "medidas": null
+      },
+      "fotos": [
+        "img_0086",
+        "img_0087"
+      ],
+      "fotosExcluidas": [],
+      "ocultar": {},
+      "video": null
+    },
+    {
+      "id": "tarro-rosca",
+      "carpeta": "tarro con rosca para guardar pequeños objetos",
+      "nombre": "Tarro con rosca",
+      "categoria": "Organización",
+      "resumen": "Tarro de dos partes con rosca para guardar objetos pequeños.",
+      "descripcion": "Un tarro cilíndrico con tapa a rosca para guardar objetos pequeños. Lleva la marca HMOB PRODS grabada en el cuerpo.",
+      "destacado": null,
+      "ficha": {
+        "material": null,
+        "herramienta": null,
+        "tiempoImpresion": null,
+        "medidas": null
+      },
+      "fotos": [
+        "img_0079",
+        "img_0078",
+        "img_0080",
+        "img_0081"
+      ],
+      "fotosExcluidas": [],
+      "ocultar": {},
+      "video": null
+    },
+    {
+      "id": "codo-esquinero",
+      "carpeta": "codos",
+      "nombre": "Codo esquinero",
+      "categoria": "Repuestos",
+      "resumen": "Unión de esquina para armar estructuras firmes o reponer piezas.",
+      "descripcion": "Un codo esquinero de tres vías para unir caños en una esquina. Sirve como repuesto o para armar estructuras firmes desde cero.",
+      "destacado": null,
+      "ficha": {
+        "material": null,
+        "herramienta": null,
+        "tiempoImpresion": null,
+        "medidas": null
+      },
+      "fotos": [
+        "img_0064",
+        "img_0065",
+        "img_0067",
+        "img_0066"
+      ],
+      "fotosExcluidas": [],
+      "ocultar": {},
+      "video": null
+    }
+  ]
+}

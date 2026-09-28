@@ -1,0 +1,290 @@
+<!doctype html>
+<!--
+  index.html — la única página del sitio.
+
+  Cómo está armado:
+  - Este archivo tiene la ESTRUCTURA (qué hay en la página).
+  - css/estilos.css tiene la APARIENCIA (cómo se ve).
+  - js/*.js tiene el COMPORTAMIENTO (qué pasa cuando hacés clic, de dónde
+    salen los datos).
+  - data/modelos.json tiene el CONTENIDO de las piezas. La galería y la
+    vista de detalle se generan desde ahí con JavaScript, por eso en este
+    HTML no hay ninguna pieza escrita a mano.
+
+  Para verlo en tu compu NO alcanza con abrir el archivo con doble clic:
+  el navegador bloquea `fetch()` sobre archivos locales. Hay que levantar
+  un servidor chiquito (ver README):   python -m http.server
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <!-- Sin esta línea, los celulares muestran la página "achicada" como si fuera de escritorio. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HmobProds — Diseño e impresión 3D · Hugo Olazabal</title>
+  <meta name="description" content="Piezas diseñadas en Fusion 360 y Blender e impresas en FDM en Montevideo. Portfolio de Hugo Olazabal.">
+
+  <!-- Open Graph: cómo se ve el link cuando lo compartís por WhatsApp o redes. -->
+  <meta property="og:title" content="HmobProds — Diseño e impresión 3D">
+  <meta property="og:description" content="Piezas diseñadas e impresas en Montevideo.">
+  <meta property="og:image" content="media/posavasos-articulado/img_0058.webp">
+
+  <!-- Ícono de la pestaña: un SVG escrito directamente en la URL (un hexágono, como los del posavasos). -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 29 9.5v13L16 30 3 22.5v-13z' fill='%23E2461D'/%3E%3C/svg%3E">
+
+  <!-- Precargamos las dos fuentes que se ven primero, para evitar el "salto" cuando cargan. -->
+  <link rel="preload" href="fonts/big-shoulders-display-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/martian-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!--
+    type="module" permite usar `import`/`export` entre archivos JS.
+    Los módulos se ejecutan automáticamente cuando el HTML terminó de
+    cargar (como si tuvieran `defer`), así que ya podemos buscar elementos.
+  -->
+  <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+  <!-- Enlace oculto que aparece al navegar con Tab: permite saltar el menú. Accesibilidad básica. -->
+  <a class="saltar" href="#piezas">Saltar a las piezas</a>
+
+  <!-- ============================== ENCABEZADO ============================== -->
+  <header class="encabezado">
+    <a class="marca" href="#inicio" aria-label="HmobProds, volver al inicio">
+      <span class="marca__hmob">HMOB</span>
+      <span class="marca__prods">PRODS</span>
+    </a>
+
+    <nav class="menu" aria-label="Secciones">
+      <a href="#piezas">Piezas</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ============================== PORTADA (HERO) ============================== -->
+    <section class="portada">
+      <!-- Una regla milimetrada decorativa. aria-hidden la oculta a lectores de pantalla. -->
+      <div class="regla" aria-hidden="true"></div>
+
+      <div class="portada__grilla">
+        <div class="portada__texto">
+          <p class="sobretitulo">Diseño 3D · Impresión FDM · Montevideo, UY</p>
+
+          <h1 class="titular">
+            <span class="titular__linea">Diseño piezas</span>
+            <span class="titular__linea">y las imprimo</span>
+            <!-- Esta línea tiene el efecto de "capas" que se imprimen de abajo hacia arriba. -->
+            <span class="titular__linea titular__capas">capa por capa.</span>
+          </h1>
+
+          <p class="bajada">
+            Soy Hugo Olazabal. Modelo en Fusion 360 y Blender e imprimo en FDM desde 2024.
+            Acá junto algunos de mis trabajos, con fotos de las piezas reales.
+          </p>
+
+          <a class="boton" href="#piezas">Ver las piezas <span aria-hidden="true">↓</span></a>
+        </div>
+
+        <!--
+          Un "cajetín" es el recuadro de datos que tienen los planos técnicos.
+          Los números con data-dato="..." los completa main.js a partir del catálogo,
+          así nunca quedan desactualizados.
+        -->
+        <dl class="cajetin cajetin--portada">
+          <div class="cajetin__fila">
+            <dt>Piezas</dt>
+            <dd data-dato="piezas">—</dd>
+          </div>
+          <div class="cajetin__fila">
+            <dt>Fotos</dt>
+            <dd data-dato="fotos">—</dd>
+          </div>
+          <div class="cajetin__fila">
+            <dt>Videos</dt>
+            <dd data-dato="videos">—</dd>
+          </div>
+          <div class="cajetin__fila">
+            <dt>Desde</dt>
+            <dd>2024</dd>
+          </div>
+          <div class="cajetin__fila cajetin__fila--ancha">
+            <dt>Herramientas</dt>
+            <dd>Fusion 360 · Blender</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================== GALERÍA ============================== -->
+    <section class="seccion" id="piezas" aria-labelledby="titulo-piezas">
+      <header class="seccion__encabezado">
+        <p class="seccion__numero">01</p>
+        <h2 class="seccion__titulo" id="titulo-piezas">Piezas</h2>
+
+        <!-- Una "cota" (línea de medida) como las de los planos. -->
+        <p class="cota" aria-hidden="true"><span data-dato="piezas">—</span> piezas</p>
+      </header>
+
+      <!-- Los botones de filtro los genera galeria.js según las categorías del catálogo. -->
+      <div class="filtros" role="group" aria-label="Filtrar por categoría"></div>
+
+      <!-- aria-live="polite": los lectores de pantalla anuncian el cambio cuando filtrás. -->
+      <p class="contador" aria-live="polite"></p>
+
+      <!-- Acá adentro galeria.js inserta una tarjeta por pieza. -->
+      <div class="galeria"></div>
+    </section>
+
+    <!-- ============================== PROCESO ============================== -->
+    <section class="seccion" id="proceso" aria-labelledby="titulo-proceso">
+      <header class="seccion__encabezado">
+        <p class="seccion__numero">02</p>
+        <h2 class="seccion__titulo" id="titulo-proceso">Cómo trabajo</h2>
+      </header>
+
+      <ol class="proceso">
+        <li class="proceso__paso">
+          <span class="proceso__num" aria-hidden="true">1</span>
+          <h3>La idea</h3>
+          <p>Hablo directo con cada cliente para entender qué necesita, para qué lo va a usar y con qué medidas.</p>
+        </li>
+        <li class="proceso__paso">
+          <span class="proceso__num" aria-hidden="true">2</span>
+          <h3>El modelo</h3>
+          <p>Lo diseño en Fusion 360 o en Blender, según lo que pida la pieza.</p>
+        </li>
+        <li class="proceso__paso">
+          <span class="proceso__num" aria-hidden="true">3</span>
+          <h3>La impresión</h3>
+          <p>La imprimo en FDM, capa por capa, y la pruebo antes de darla por terminada.</p>
+        </li>
+        <li class="proceso__paso">
+          <span class="proceso__num" aria-hidden="true">4</span>
+          <h3>La entrega</h3>
+          <p>La pieza terminada, lista para usar.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================== SOBRE MÍ ============================== -->
+    <section class="seccion" id="sobre-mi" aria-labelledby="titulo-sobre-mi">
+      <header class="seccion__encabezado">
+        <p class="seccion__numero">03</p>
+        <h2 class="seccion__titulo" id="titulo-sobre-mi">Sobre mí</h2>
+      </header>
+
+      <div class="sobre-mi">
+        <div class="sobre-mi__texto">
+          <p>
+            Soy Hugo Olazabal y estudio Ingeniería en Computación en la
+            Facultad de Ingeniería de la Udelar. En 2024 empecé HmobProds, mi emprendimiento
+            de diseño 3D y fabricación aditiva: modelo las piezas, las imprimo y atiendo a
+            cada cliente de forma directa.
+          </p>
+          <p>
+            Esta web también es un proyecto de programación. La estoy construyendo desde cero,
+            con HTML, CSS y JavaScript y sin frameworks, para aprender cómo funciona cada parte.
+            <span data-repositorio hidden>El código está <a href="#">en GitHub</a>.</span>
+          </p>
+        </div>
+
+        <dl class="cajetin">
+          <div class="cajetin__fila"><dt>Modelado</dt><dd>Fusion 360 · Blender</dd></div>
+          <div class="cajetin__fila"><dt>Impresión</dt><dd>FDM</dd></div>
+          <div class="cajetin__fila"><dt>Base</dt><dd>Montevideo, Uruguay</dd></div>
+          <div class="cajetin__fila"><dt>Estudios</dt><dd>Ing. en Computación — FIng, Udelar</dd></div>
+          <div class="cajetin__fila cajetin__fila--ancha"><dt>Idiomas</dt><dd>Español · Inglés · Portugués</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACTO ============================== -->
+    <section class="seccion contacto" id="contacto" aria-labelledby="titulo-contacto">
+      <header class="seccion__encabezado">
+        <p class="seccion__numero">04</p>
+        <h2 class="seccion__titulo" id="titulo-contacto">Contacto</h2>
+      </header>
+
+      <p class="contacto__frase">¿Tenés algo para imprimir? <br>Contame la idea.</p>
+
+      <!-- Los botones salen de data/sitio.json. Si un dato está vacío, ese botón no se muestra. -->
+      <div class="contacto__enlaces"></div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p><strong>HmobProds</strong> · Hugo Olazabal · Montevideo</p>
+    <p>Hecho a mano con HTML, CSS y JavaScript · <span data-dato="anio">2026</span></p>
+  </footer>
+
+
+  <!-- =========================================================================
+       VISTA DE DETALLE
+       <dialog> es un elemento nativo de HTML para ventanas modales: ya trae
+       el cierre con Esc, el fondo oscuro (::backdrop) y mantiene el foco
+       adentro mientras está abierto. detalle.js lo llena y lo abre.
+       ========================================================================= -->
+  <dialog class="detalle" aria-labelledby="detalle-titulo">
+    <div class="detalle__barra">
+      <span class="detalle__hoja" data-detalle="hoja"></span>
+      <button class="detalle__cerrar" type="button" data-accion="cerrar">
+        Cerrar <span aria-hidden="true">✕</span>
+      </button>
+    </div>
+
+    <div class="detalle__cuerpo">
+      <div class="visor">
+        <div class="visor__escenario" data-detalle="escenario"></div>
+        <button class="visor__flecha visor__flecha--ant" type="button" data-accion="foto-anterior" aria-label="Foto anterior">←</button>
+        <button class="visor__flecha visor__flecha--sig" type="button" data-accion="foto-siguiente" aria-label="Foto siguiente">→</button>
+        <ol class="visor__miniaturas" data-detalle="miniaturas" aria-label="Fotos de la pieza"></ol>
+      </div>
+
+      <div class="detalle__info">
+        <p class="etiqueta-destacada" data-detalle="destacado" hidden></p>
+        <h2 class="detalle__titulo" id="detalle-titulo" data-detalle="titulo"></h2>
+        <div class="detalle__descripcion" data-detalle="descripcion"></div>
+        <dl class="cajetin" data-detalle="ficha"></dl>
+
+        <nav class="detalle__navegacion" aria-label="Otras piezas">
+          <a data-detalle="anterior" href="#">← <span></span></a>
+          <a data-detalle="siguiente" href="#"><span></span> →</a>
+        </nav>
+      </div>
+    </div>
+  </dialog>
+
+
+  <!-- =========================================================================
+       PLANTILLAS
+       Un <template> no se muestra en la página: es un "molde" que JavaScript
+       copia (cloneNode) y rellena una vez por pieza. Es más prolijo y más
+       seguro que armar HTML concatenando strings.
+       ========================================================================= -->
+  <template id="plantilla-tarjeta">
+    <a class="tarjeta" href="#">
+      <figure class="tarjeta__foto">
+        <img class="tarjeta__img" alt="" width="480" height="640" loading="lazy" decoding="async">
+        <img class="tarjeta__img tarjeta__img--alterna" alt="" width="480" height="640" loading="lazy" decoding="async">
+        <span class="tarjeta__num"></span>
+        <span class="tarjeta__video" hidden>▶ Video</span>
+      </figure>
+      <div class="tarjeta__datos">
+        <p class="etiqueta-destacada" hidden></p>
+        <h3 class="tarjeta__nombre"></h3>
+        <p class="tarjeta__resumen"></p>
+        <p class="tarjeta__meta">
+          <span class="tarjeta__categoria"></span>
+          <span class="tarjeta__fotos"></span>
+        </p>
+      </div>
+    </a>
+  </template>
+</body>
+</html>

@@ -1,0 +1,26 @@
+# Archivos que Git NO tiene que subir nunca.
+# Cada línea es un patrón: un nombre, una carpeta (termina en /) o un comodín (*).
+
+# Python: archivos compilados que genera solo al correr los scripts
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Basura que crean Windows y macOS en cada carpeta
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Configuración personal del editor
+.vscode/
+.idea/
+
+# Por las dudas: fotos y videos originales del celular (pesan mucho).
+# Las originales viven FUERA del repo, en "../Modelos 3d". Al repo solo van
+# las versiones .webp y .mp4 de la carpeta media/.
+*.JPG
+*.jpg
+*.jpeg
+*.HEIC
+*.MOV
