@@ -1,4 +1,4 @@
-# Portfolio 3D — Hugo Olazabal
+# Portfolio 3D — HmobProds
 
 Hola, soy Hugo. Diseño e imprimo objetos en 3D desde Montevideo, y en este repositorio armo la web que los reúne.
 
